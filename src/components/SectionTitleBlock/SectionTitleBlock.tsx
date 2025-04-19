@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./SectionTitleBlock.module.scss";
 import Image from "next/image";
 import { Typography } from "@/components/UI/Typography/Typography";
+import { Variants } from "../UI/Typography/Typography.consts";
 
 interface SectionTitleBlockProps {
   iconSrc?: string;
@@ -33,7 +34,10 @@ export const SectionTitleBlock: React.FC<SectionTitleBlockProps> = ({
           </Typography>
         </div>
       )}
-      <Typography variant={`headlines.${as}`} className={styles.title}>
+      <Typography
+        variant={`headlines.${as}` as Variants}
+        className={styles.title}
+      >
         {title}
       </Typography>
       {description && (
