@@ -1,0 +1,33 @@
+@import "../../assets/styles/mixins.scss";
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    background-image: url("/assets/images/bg.svg");
+    background-size: cover;
+
+    @include respond(tablet) {
+        margin: 0;
+    }
+
+    & > div > p {
+        color: white;
+    }
+
+    .actionWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        & > a {
+            min-width: 174px;
+        }
+        @include respond(tablet) {
+            flex-direction: column;
+        }
+    }
+}

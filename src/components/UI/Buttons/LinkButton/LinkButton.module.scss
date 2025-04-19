@@ -1,0 +1,88 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  padding: 13px 26px;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 16px;
+  transition: all ease-in 0.5s;
+  line-height: 1;
+  letter-spacing: 0;
+  border: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  gap: 8px;
+  width: fit-content;
+  white-space: nowrap;
+  text-decoration: none;
+
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+}
+
+/* === VARIANTS === */
+.primary {
+  background-color: #120635;
+  color: #fff;
+
+  &:hover {
+    background-color: rgba(18, 6, 53, 0.9);
+  }
+
+  &:active {
+    background-color: rgba(18, 6, 53, 1);
+    transform: scale(0.98);
+  }
+}
+
+.outline {
+  background-color: transparent;
+  color: #120635;
+  border: 1.5px solid #120635;
+
+  &:hover {
+    background-color: rgba(18, 6, 53, 0.05);
+  }
+
+  &:active {
+    background-color: rgba(18, 6, 53, 0.08);
+    transform: scale(0.98);
+  }
+}
+
+.white {
+  background: radial-gradient(93.01% 240.04% at 84.46% 25.78%, #ffffff 0%, #c8cfe9 100%);
+  color: #120635;
+  border: 1.5px solid #fff;
+
+  &:hover {
+    color: white;
+    background: transparent;
+  }
+
+  &:active {
+    background-color: rgba(18, 6, 53, 0.08);
+    transform: scale(0.98);
+  }
+}
+
+.whiteOutline {
+  background-color: transparent;
+  color: white;
+  
+  border: 1.5px solid #fff;
+
+  &:hover {
+    color: #120635;
+    background: radial-gradient(93.01% 240.04% at 84.46% 25.78%, #ffffff 0%, #c8cfe9 100%);
+  }
+
+  &:active {
+    background-color: rgba(18, 6, 53, 0.08);
+    transform: scale(0.98);
+  }
+}

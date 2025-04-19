@@ -1,0 +1,161 @@
+@import "../../assets/styles/mixins.scss";
+
+.wrapper {
+    width: 100%;
+    padding: 0 0 80px;
+    display: grid;
+    place-items: center;
+
+    @include respond(tablet) {
+        padding: 0 0 40px;
+    }
+    .table {
+        width: 100%;
+    }
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.tableWrapper {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.titleFeatures {
+    @include respond(tablet) {
+        display: none;
+    }
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+        text-align: center;
+        vertical-align: top;
+
+        .headCell {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding-top: 8px;
+        }
+
+        .planName {
+            color: #5b3df6;
+            white-space: nowrap;
+            @include respond(tablet) {
+                font-size: 18px;
+            }
+        }
+
+        .planPrice {
+            color: #120635;
+            white-space: nowrap;
+
+            @include respond(tablet) {
+                font-size: 18px;
+            }
+            span {
+                color: #120635;
+                white-space: nowrap;
+                margin-left: 4px;
+            }
+        }
+
+        .headButton {
+            margin-top: 8px;
+            width: 100%;
+            max-width: 224px;
+
+            @include respond(tablet) {
+                display: none;
+            }
+        }
+    }
+
+    th,
+    td {
+        padding: 20px 24px;
+        text-align: left;
+        vertical-align: middle;
+
+        @include respond(laptopL) {
+            padding: 20px 8px;
+        }
+    }
+
+    th {
+        text-align: center;
+        border-bottom: 1px solid #eaeaea;
+    }
+}
+
+@media (max-width: 768px) {
+    .table {
+        border: 0;
+    }
+
+    .table thead {
+        display: flex;
+        width: 100%;
+        > tr {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+    }
+
+    .table,
+    .table tbody {
+        display: block;
+        border: 0;
+        width: 100%;
+    }
+
+    .table td {
+        padding: 20px 16px;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+        width: 100%;
+
+        &::before {
+            display: none;
+        }
+
+        img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    .table tr td:first-child {
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        border-bottom: none;
+    }
+
+    .table tr td:not(:first-child) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 8px;
+        border-bottom: none;
+    }
+
+    .table tr td:not(:first-child) > * {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

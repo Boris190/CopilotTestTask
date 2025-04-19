@@ -1,0 +1,11 @@
+.root {
+  color: #a4a4a4;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .iconWrapper svg {
+    width: 16px;
+  }
+}

@@ -1,0 +1,54 @@
+@import "../../assets/styles/mixins.scss";
+
+.tariffsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  @include respond(laptopL) {
+    flex-direction: column;
+  }
+}
+.visitRepo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 32px;
+  border-radius: 32px;
+  background: var(--Neutral-White);
+  width: 100%;
+  border: 1px solid rgba(221, 211, 197, 0.65);
+  margin-top: 12px;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    margin-top: auto;
+
+    @include respond(laptopL) {
+      width: 100%;
+    }
+  }
+
+  @include respond(laptopL) {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  & .textWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+
+    & .repoText {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@import "../../assets/styles/mixins.scss";
+
+.scrollWrapper {
+    margin: 80px;
+    position: relative;
+
+    @include respond(tablet) {
+        margin: 50px;
+    }
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 25px;
+        height: 100%;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    &::before {
+        left: 0;
+        background: linear-gradient(to right, white 0%, transparent 100%);
+    }
+
+    &::after {
+        right: 0;
+        background: linear-gradient(to left, white 0%, transparent 100%);
+    }
+}
+
+.scrollBar {
+    display: flex;
+    overflow-x: auto;
+    gap: 58px;
+    height: 36px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    align-items: center;
+    justify-content: center;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    img {
+        flex-shrink: 0;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    @include respond(tablet) {
+        height: auto;
+        gap: 8px;
+        padding: 8px 0;
+    }
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto;
+
+    @include respond(tablet) {
+        margin: 50px auto;
+    }
+
+    & > p {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+.integration {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    gap: 20px;
+
+    @include respond(tablet) {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    & div:first-child {
+        text-align: left;
+        align-items: flex-start;
+        margin: 0;
+
+        @include respond(tablet) {
+            text-align: center;
+            align-items: center;
+        }
+    }
+
+    .imageBlock {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+}

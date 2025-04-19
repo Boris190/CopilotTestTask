@@ -1,0 +1,219 @@
+// Media Queries Mixins
+@mixin respond($breakpoint) {
+  @if $breakpoint == laptopXL {
+    @media only screen and (width <= 1440px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptopL {
+    @media only screen and (width <= 1024px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptopXM {
+    @media only screen and (width <= 910px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptopM {
+    @media only screen and (width <= 838px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptop {
+    @media only screen and (width <= 824px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media only screen and (width <= 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobileM {
+    @media only screen and (width <= 700px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobileXM {
+    @media only screen and (width <= 475px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobileL {
+    @media only screen and (width <= 430px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media only screen and (width <= 375px) {
+      @content;
+    }
+  }
+}
+
+@mixin transition {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+// Typography Mixins
+
+@mixin caption1 {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0;
+}
+
+@mixin caption1_laptop {
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0;
+}
+
+@mixin caption1_mobileL {
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+}
+
+@mixin caption4 {
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0;
+}
+
+@mixin caption4_laptop {
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0;
+}
+
+@mixin caption4_mobileL {
+  font-size: 15px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+}
+
+@mixin caption2 {
+  font-weight: 500;
+  font-size: 40px;
+  font-style: normal;
+  line-height: normal;
+}
+
+@mixin caption2_laptop {
+  font-weight: 500;
+  font-size: 32px;
+  font-style: normal;
+  line-height: normal;
+}
+
+@mixin caption2_mobileL {
+  font-weight: 500;
+  font-size: 44px;
+  font-style: normal;
+  line-height: normal;
+}
+
+@mixin caption_title {
+  font-weight: 500;
+  font-size: 26px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -3%;
+}
+
+@mixin caption_title_laptop {
+  font-weight: 500;
+  font-size: 24px;
+  font-style: normal;
+  line-height: normal;
+}
+
+@mixin caption_title_mobileL {
+  font-weight: 500;
+  font-size: 20px;
+  font-style: normal;
+  line-height: normal;
+}
+
+@mixin regular16 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+@mixin regular16_laptop {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+@mixin regular16_mobileL {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+@mixin h2 {
+  font-weight: 500;
+  font-size: 70px;
+  line-height: 100%;
+}
+
+@mixin h2_laptop {
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 100%;
+}
+
+@mixin h2_mobileL {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 100%;
+}
+
+
+@mixin h3 {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 100%;
+}
+
+@mixin h3_laptop {
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 100%;
+}
+
+@mixin h3_mobileL {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 100%;
+}

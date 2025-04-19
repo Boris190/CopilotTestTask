@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  width: max-content;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.line {
+  height: 2px;
+  width: 17px;
+  border-radius: 9999px;
+  background-color: black;
+  transition: all 0.3s ease;
+  transform-origin: center;
+  opacity: 0.5;
+
+  &:not(:last-child) {
+    margin-bottom: 2px;
+  }
+
+  .container:hover & {
+    opacity: 1;
+  }
+}
+
+.line1Open {
+  transform: rotate(45deg) translateY(2px);
+}
+
+.line3Open {
+  transform: rotate(-45deg) translateY(-2px);
+}
+
+.line2Open {
+  display: none;
+}

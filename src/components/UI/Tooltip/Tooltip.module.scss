@@ -1,0 +1,36 @@
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  outline: none;
+
+  color: #66646d;
+
+  & p {
+    color: gray;
+  }
+}
+
+.content {
+  user-select: none;
+
+  max-width: 292px;
+  z-index: 10;
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(221, 211, 197, 0.65);
+
+  .title {
+    color: var(--Neutral-White);
+  }
+
+  .text {
+    color: #66646d;
+  }
+
+  .tooltipArrow {
+    fill: rgba(221, 211, 197, 0.8);
+  }
+}

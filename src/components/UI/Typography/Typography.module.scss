@@ -1,0 +1,86 @@
+@import "../../../assets/styles/mixins.scss";
+
+.paragraphsCaption1 {
+  @include respond(laptop) {
+    @include caption1_laptop;
+  }
+
+  @include respond(mobileL) {
+    @include caption1_mobileL;
+  }
+
+  @include caption1;
+}
+
+.paragraphsCaption4 {
+  @include respond(laptop) {
+    @include caption4_laptop;
+  }
+
+  @include respond(mobileL) {
+    @include caption4_mobileL;
+  }
+
+  @include caption4;
+}
+
+.paragraphsCaption2 {
+  @include respond(laptop) {
+    @include caption2_laptop;
+  }
+
+  @include respond(mobileL) {
+    @include caption2_mobileL;
+  }
+
+  @include caption2;
+}
+
+.paragraphsCaptionTitle {
+  @include respond(laptop) {
+    @include caption_title_laptop;
+  }
+
+  @include respond(mobileL) {
+    @include caption_title_mobileL;
+  }
+
+  @include caption_title;
+}
+
+.paragraphsRegular16 {
+  @include respond(laptop) {
+    @include regular16_laptop;
+  }
+
+  @include respond(mobileL) {
+    @include regular16_mobileL;
+  }
+
+  @include regular16;
+}
+
+.headlinesH2 {
+  @include respond(laptop) {
+    @include h2_laptop;
+  }
+
+  @include respond(mobileL) {
+    @include h2_mobileL;
+  }
+
+  @include h2;
+}
+
+
+.headlinesH3 {
+  @include respond(laptop) {
+    @include h3_laptop;
+  }
+
+  @include respond(mobileL) {
+    @include h3_mobileL;
+  }
+
+  @include h3;
+}

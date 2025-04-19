@@ -1,0 +1,64 @@
+@import "../../assets/styles/mixins.scss";
+
+.sectionRow td {
+    background-color: #f5f0ea;
+    font-weight: 600;
+    font-size: 14px;
+    color: #120635;
+    padding: 12px 24px;
+    border-radius: 8px;
+}
+
+
+
+@include respond(tablet) {
+    .sectionRow {
+        display: flex;
+        width: 100%;
+    }
+}
+
+.featureRow {
+    border-bottom: 1px solid #ddd3c5a6;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+@include respond(tablet) {
+    .featureRow {
+        display: grid;
+        grid-template-columns: 1fr repeat(2, minmax(50px, 1fr));
+        grid-template-rows: auto auto;
+        align-items: center;
+        justify-items: center;
+        margin-bottom: 22px;
+        padding: 0;
+    }
+}
+
+.label {
+    color: #120635;
+    display: flex;
+    gap: 10px;
+    font-weight: 500;
+    min-width: 200px;
+}
+
+.cell {
+    text-align: center;
+    min-width: 100px;
+    place-items: center;
+
+    svg {
+        width: 18px;
+        height: 18px;
+        fill: #5b3df6;
+    }
+
+    .text {
+        font-size: 14px;
+        color: #333;
+    }
+}
